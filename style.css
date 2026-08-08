@@ -1834,3 +1834,695 @@ body {
     }
 }
 
+/* =========================================
+   WATER QUALITY PAGE
+========================================= */
+
+
+/* =========================================
+   OVERALL STATUS
+========================================= */
+
+.water-status-card {
+
+    background: #eff9f1;
+
+    border: 1px solid #d7eadb;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 16px;
+}
+
+
+.water-status-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+
+.water-status-label {
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    color: #347447;
+
+    letter-spacing: 0.5px;
+}
+
+
+.water-status-content h2 {
+
+    font-size: 22px;
+
+    color: #28723e;
+
+    margin: 3px 0;
+}
+
+
+.water-status-content p {
+
+    font-size: 11px;
+
+    color: #55705d;
+}
+
+
+.status-indicator {
+
+    margin-left: auto;
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #3b9653;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   WATER SECTION
+========================================= */
+
+.water-section {
+
+    margin-bottom: 16px;
+}
+
+
+.water-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+
+.water-section-title h2 {
+
+    font-size: 17px;
+}
+
+
+.water-section-title p {
+
+    font-size: 10px;
+
+    color: var(--text-light);
+
+    margin-top: 3px;
+}
+
+
+.water-section-title select {
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    border-radius: 7px;
+
+    padding: 8px 12px;
+
+    font-size: 11px;
+
+    outline: none;
+}
+
+
+/* =========================================
+   WATER PARAMETERS
+========================================= */
+
+.water-parameter-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 10px;
+}
+
+
+.water-parameter-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    padding: 14px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.parameter-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+
+.parameter-icon {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 19px;
+}
+
+
+.parameter-icon.temperature {
+
+    background: #fff0e7;
+}
+
+
+.parameter-icon.ph {
+
+    background: #eeeaff;
+}
+
+
+.parameter-icon.oxygen {
+
+    background: #eaf6ff;
+}
+
+
+.parameter-icon.ammonia {
+
+    background: #fff7db;
+}
+
+
+.parameter-icon.nitrite {
+
+    background: #f3edff;
+}
+
+
+.parameter-icon.turbidity {
+
+    background: #e9f8f7;
+}
+
+
+.parameter-status {
+
+    padding: 4px 7px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.parameter-status.good {
+
+    background: #e7f6eb;
+
+    color: #28733c;
+}
+
+
+.parameter-status.warning {
+
+    background: #fff3d8;
+
+    color: #9a6800;
+}
+
+
+.parameter-status.critical {
+
+    background: #fde8e8;
+
+    color: #b72d2d;
+}
+
+
+.parameter-name {
+
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.water-parameter-card strong {
+
+    font-size: 23px;
+
+    display: inline-block;
+}
+
+
+.water-parameter-card > small {
+
+    font-size: 9px;
+
+    color: var(--text-light);
+
+    margin-left: 2px;
+}
+
+
+.parameter-range {
+
+    border-top: 1px solid #edf0f3;
+
+    margin-top: 10px;
+
+    padding-top: 8px;
+
+    font-size: 8px;
+
+    color: #7c8792;
+}
+
+
+/* =========================================
+   RECORD CARD
+========================================= */
+
+.water-record-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 16px;
+}
+
+
+.water-header {
+
+    margin-bottom: 17px;
+}
+
+
+.water-header h2 {
+
+    color: #2584bb;
+}
+
+
+.water-form {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+}
+
+
+.water-form select,
+.water-form input[type="date"] {
+
+    width: 100%;
+
+    border: 1px solid #d7dde5;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    padding: 10px;
+
+    background: white;
+
+    font-size: 12px;
+}
+
+
+.water-form select:focus,
+.water-form input[type="date"]:focus {
+
+    border-color: var(--blue);
+}
+
+
+.save-water-btn {
+
+    margin-top: 18px;
+
+    border: none;
+
+    background: #1976bd;
+
+    color: white;
+
+    border-radius: 7px;
+
+    padding: 10px 17px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+.save-water-btn:hover {
+
+    opacity: 0.9;
+
+    transform: translateY(-1px);
+}
+
+
+.save-message {
+
+    display: inline-block;
+
+    margin-left: 12px;
+
+    font-size: 11px;
+
+    color: #2f7d45;
+}
+
+
+/* =========================================
+   HISTORY
+========================================= */
+
+.water-history-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    box-shadow: var(--shadow);
+
+    margin-bottom: 16px;
+}
+
+
+.table-container {
+
+    overflow-x: auto;
+}
+
+
+.table-container table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 650px;
+}
+
+
+.table-container th {
+
+    background: #f7f9fb;
+
+    color: #66717d;
+
+    text-align: left;
+
+    padding: 11px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+}
+
+
+.table-container td {
+
+    padding: 12px 11px;
+
+    border-top: 1px solid #edf0f3;
+
+    font-size: 10px;
+}
+
+
+.table-good,
+.table-warning,
+.table-critical {
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.table-good {
+
+    background: #e7f6eb;
+
+    color: #28733c;
+}
+
+
+.table-warning {
+
+    background: #fff3d8;
+
+    color: #9a6800;
+}
+
+
+.table-critical {
+
+    background: #fde8e8;
+
+    color: #b72d2d;
+}
+
+
+/* =========================================
+   GUIDE
+========================================= */
+
+.parameter-guide {
+
+    margin-bottom: 16px;
+}
+
+
+.guide-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.guide-card {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 14px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.guide-card strong {
+
+    display: block;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+
+.guide-card p {
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+    color: var(--text-light);
+}
+
+
+/* =========================================
+   WATER QUALITY RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .water-parameter-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .water-form {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .guide-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .water-status-card {
+
+        align-items: flex-start;
+    }
+
+    .water-status-content h2 {
+
+        font-size: 19px;
+    }
+
+    .water-parameter-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .water-form {
+
+        grid-template-columns: 1fr;
+    }
+
+    .guide-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .water-section-title {
+
+        align-items: flex-start;
+
+        gap: 10px;
+
+        flex-direction: column;
+    }
+
+    .water-section-title select {
+
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .water-parameter-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .water-status-card {
+
+        padding: 15px;
+    }
+
+    .status-indicator {
+
+        width: 34px;
+
+        height: 34px;
+    }
+
+    .save-water-btn {
+
+        width: 100%;
+    }
+
+    .save-message {
+
+        display: block;
+
+        margin: 10px 0 0;
+    }
+}
