@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AquaFisheries | Fish-Farm Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar">
+
+        <!-- Logo -->
+        <div class="logo-area">
+            <div class="logo-icon">🐟</div>
+
+            <div>
+                <h2>AquaFisheries</h2>
+                <p>Learn • Manage • Grow</p>
+            </div>
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📖</span>
+                <span>Learn</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">❓</span>
+                <span>Quizzes</span>
+            </a>
+
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">🧮</span>
+                <span>Fish-Farm Calculator</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span>Farm Records</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">💧</span>
+                <span>Water Quality</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🛡️</span>
+                <span>Diseases</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📈</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🏅</span>
+                <span>Certificates</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item logout">
+                <span class="nav-icon">↪</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div class="page-title">
+
+                <div class="calculator-title-icon">
+                    🧮
+                </div>
+
+                <div>
+                    <h1>Fish-Farm Calculator</h1>
+
+                    <p>
+                        Calculate key aquaculture metrics and farm profitability
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- User Area -->
+            <div class="user-area">
+
+                <button class="notification">
+                    🔔
+                    <span>2</span>
+                </button>
+
+                <div class="user-profile">
+
+                    <div class="profile-image">
+                        👤
+                    </div>
+
+                    <div>
+                        <strong>Abumeenat</strong>
+                        <small>Fisheries Graduate</small>
+                    </div>
+
+                    <span class="dropdown">⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             CALCULATOR SELECTOR
+        ========================== -->
+
+        <section class="calculator-selector">
+
+            <h2>Choose a Calculator</h2>
+
+            <div class="calculator-tabs">
+
+                <button class="calculator-tab active"
+                        data-target="stocking">
+
+                    <span class="tab-icon">🐟</span>
+
+                    <span>
+                        Stocking
+                        <br>
+                        Calculator
+                    </span>
+
+                </button>
+
+
+                <button class="calculator-tab"
+                        data-target="feed">
+
+                    <span class="tab-icon">🌱</span>
+
+                    <span>
+                        Feed
+                        <br>
+                        Calculator
+                    </span>
+
+                </button>
+
+
+                <button class="calculator-tab"
+                        data-target="survival">
+
+                    <span class="tab-icon">🛡️</span>
+
+                    <span>
+                        Survival
+                        <br>
+                        Calculator
+                    </span>
+
+                </button>
+
+
+                <button class="calculator-tab"
+                        data-target="growth">
+
+                    <span class="tab-icon">📈</span>
+
+                    <span>
+                        Growth
+                        <br>
+                        Calculator
+                    </span>
+
+                </button>
+
+
+                <button class="calculator-tab"
+                        data-target="profit">
+
+                    <span class="tab-icon">💰</span>
+
+                    <span>
+                        Profit
+                        <br>
+                        Calculator
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             STOCKING CALCULATOR
+        ========================== -->
+
+        <section class="calculator-section active"
+                 id="stocking">
+
+            <div class="section-header">
+
+                <span>1.</span>
+
+                <h2>STOCKING CALCULATOR</h2>
+
+            </div>
+
+
+            <div class="calculator-body">
+
+                <!-- Inputs -->
+
+                <div class="calculator-inputs">
+
+                    <div class="input-group">
+
+                        <label>
+                            Pond Area
+                            <span title="Total pond surface area">ⓘ</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="pondArea"
+                                value="500"
+                                min="0"
+                            >
+
+                            <span>m²</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Stocking Density
+                            <span title="Number of fish per square metre">ⓘ</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="stockingDensity"
+                                value="5"
+                                min="0"
+                                step="0.1"
+                            >
+
+                            <span>fish/m²</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Average Fish Size
+                            <span title="Average length of fish">ⓘ</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="fishSize"
+                                value="10"
+                                min="0"
+                            >
+
+                            <span>cm</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-box">
+
+                        🐟
+
+                        <span>
+                            Recommended density for Catfish
+                            <br>
+                            <strong>
+                                (Clarias gariepinus): 3 – 10 fish/m²
+                            </strong>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Result -->
+
+                <div class="result-card blue-result">
+
+                    <span class="result-label">
+                        RESULT
+                    </span>
+
+                    <h3>
+                        Number of Fish to Stock
+                    </h3>
+
+                    <div class="result-number">
+
+                        <span id="stockingResult">
+                            2,500
+                        </span>
+
+                        <small>fish</small>
+
+                    </div>
+
+
+                    <div class="pond-illustration">
+                        🟦🐟🟦
+                    </div>
+
+
+                    <p id="stockingMessage">
+
+                        You can stock 2,500 fish of
+                        average size 10 cm in your
+                        500 m² pond.
+
+                    </p>
+
+
+                    <button class="reset-btn"
+                            onclick="resetStocking()">
+
+                        ↻ Reset
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FEED CALCULATOR
+        ========================== -->
+
+        <section class="calculator-section"
+                 id="feed">
+
+            <div class="section-header">
+
+                <span>2.</span>
+
+                <h2>FEED CALCULATOR</h2>
+
+            </div>
+
+
+            <div class="calculator-body">
+
+                <div class="calculator-inputs">
+
+                    <div class="input-group">
+
+                        <label>
+                            Number of Fish
+                            <span>ⓘ</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="numberFish"
+                                value="2500"
+                                min="0"
+                            >
+
+                            <span>fish</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Average Fish Weight
+                            <span>ⓘ</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="averageWeight"
+                                value="50"
+                                min="0"
+                            >
+
+                            <span>g</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Feeding Rate
+                            <span>ⓘ</span>
+                        </label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="feedingRate"
+                                value="3"
+                                min="0"
+                                step="0.1"
+                            >
+
+                            <span>% body weight</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Feed Conversion Ratio (FCR)
+                            <span>ⓘ</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="fcr"
+                            value="1.5"
+                            min="0"
+                            step="0.1"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-card green-result">
+
+                    <span class="result-label">
+                        RESULT
+                    </span>
+
+                    <h3>
+                        Daily Feed Required
+                    </h3>
+
+                    <div class="result-number">
+
+                        <span id="dailyFeed">
+                            3.75
+                        </span>
+
+                        <small>kg/day</small>
+
+                    </div>
+
+
+                    <h3>
+                        Monthly Feed Required
+                    </h3>
+
+                    <div class="result-number">
+
+                        <span id="monthlyFeed">
+                            112.5
+                        </span>
+
+                        <small>kg/month</small>
+
+                    </div>
+
+
+                    <button class="reset-btn"
+                            onclick="resetFeed()">
+
+                        ↻ Reset
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             THREE SMALL CALCULATORS
+        ========================== -->
+
+        <div class="three-calculators">
+
+
+            <!-- SURVIVAL -->
+
+            <section class="small-calculator"
+                     id="survival">
+
+                <div class="section-header">
+
+                    <span>3.</span>
+
+                    <h2>SURVIVAL CALCULATOR</h2>
+
+                </div>
+
+
+                <div class="small-body">
+
+                    <div class="input-group">
+
+                        <label>Fish Stocked</label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="fishStocked"
+                                value="2500"
+                                min="0"
+                            >
+
+                            <span>fish</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Fish Harvested</label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="fishHarvested"
+                                value="2000"
+                                min="0"
+                            >
+
+                            <span>fish</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="small-result">
+
+                        <span>
+                            SURVIVAL RATE
+                        </span>
+
+                        <strong id="survivalResult">
+                            80.00
+                        </strong>
+
+                        <small>%</small>
+
+                    </div>
+
+
+                    <button class="reset-btn"
+                            onclick="resetSurvival()">
+
+                        ↻ Reset
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- GROWTH -->
+
+            <section class="small-calculator"
+                     id="growth">
+
+                <div class="section-header">
+
+                    <span>4.</span>
+
+                    <h2>GROWTH CALCULATOR</h2>
+
+                </div>
+
+
+                <div class="small-body">
+
+                    <div class="input-group">
+
+                        <label>Initial Weight</label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="initialWeight"
+                                value="10"
+                                min="0"
+                            >
+
+                            <span>g</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Final Weight</label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="finalWeight"
+                                value="250"
+                                min="0"
+                            >
+
+                            <span>g</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Culture Period</label>
+
+                        <div class="input-with-unit">
+
+                            <input
+                                type="number"
+                                id="culturePeriod"
+                                value="120"
+                                min="1"
+                            >
+
+                            <span>days</span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="small-result purple-result">
+
+                        <span>
+                            AVERAGE WEIGHT GAIN
+                        </span>
+
+                        <strong id="growthResult">
+                            2.00
+                        </strong>
+
+                        <small>g/day</small>
+
+                    </div>
+
+
+                    <button class="reset-btn"
+                            onclick="resetGrowth()">
+
+                        ↻ Reset
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PROFIT -->
+
+            <section class="small-calculator"
+                     id="profit">
+
+                <div class="section-header">
+
+                    <span>5.</span>
+
+                    <h2>PROFIT CALCULATOR</h2>
+
+                </div>
+
+
+                <div class="small-body">
+
+                    <div class="input-group">
+
+                        <label>
+                            Total Cost (₦)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="totalCost"
+                            value="350000"
+                            min="0"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>
+                            Expected Sales (₦)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="expectedSales"
+                            value="600000"
+                            min="0"
+                        >
+
+                    </div>
+
+
+                    <div class="small-result profit-result">
+
+                        <span>
+                            ESTIMATED PROFIT
+                        </span>
+
+                        <strong id="profitResult">
+                            ₦250,000
+                        </strong>
+
+                    </div>
+
+
+                    <button class="reset-btn"
+                            onclick="resetProfit()">
+
+                        ↻ Reset
+
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+
+        <!-- Tip -->
+
+        <div class="tip-box">
+
+            💡
+
+            <strong>Tip:</strong>
+
+            Accurate records and regular monitoring are key
+            to a successful fish farm.
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         MOBILE NAVIGATION
+    ========================== -->
+
+    <nav class="mobile-nav">
+
+        <a href="#">
+            <span>⌂</span>
+            Home
+        </a>
+
+        <a href="#">
+            <span>📖</span>
+            Learn
+        </a>
+
+        <a href="#" class="active">
+            <span>🧮</span>
+            Calculator
+        </a>
+
+        <a href="#">
+            <span>📋</span>
+            Records
+        </a>
+
+        <a href="#">
+            <span>👤</span>
+            Profile
+        </a>
+
+    </nav>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
