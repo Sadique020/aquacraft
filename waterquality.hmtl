@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AquaFisheries | Water Quality</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">🐟</div>
+
+            <div>
+                <h2>AquaFisheries</h2>
+                <p>Learn • Manage • Grow</p>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📖</span>
+                <span>Learn</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">❓</span>
+                <span>Quizzes</span>
+            </a>
+
+            <a href="calculator.html" class="nav-item">
+                <span class="nav-icon">🧮</span>
+                <span>Fish-Farm Calculator</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📋</span>
+                <span>Farm Records</span>
+            </a>
+
+            <a href="water-quality.html" class="nav-item active">
+                <span class="nav-icon">💧</span>
+                <span>Water Quality</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🛡️</span>
+                <span>Diseases</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">📈</span>
+                <span>Market Prices</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">🏅</span>
+                <span>Certificates</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">👤</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙️</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item logout">
+                <span class="nav-icon">↪</span>
+                <span>Logout</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="page-title">
+
+                <div class="calculator-title-icon">
+                    💧
+                </div>
+
+                <div>
+
+                    <h1>Water Quality</h1>
+
+                    <p>
+                        Monitor important water parameters for your fish farm
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="user-area">
+
+                <button class="notification">
+                    🔔
+                    <span>2</span>
+                </button>
+
+                <div class="user-profile">
+
+                    <div class="profile-image">
+                        👤
+                    </div>
+
+                    <div>
+                        <strong>Abumeenat</strong>
+                        <small>Fisheries Graduate</small>
+                    </div>
+
+                    <span class="dropdown">⌄</span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================
+             OVERALL STATUS
+        ========================== -->
+
+        <section class="water-status-card">
+
+            <div class="water-status-icon">
+                💧
+            </div>
+
+            <div class="water-status-content">
+
+                <span class="water-status-label">
+                    OVERALL WATER QUALITY
+                </span>
+
+                <h2 id="overallStatus">
+                    GOOD
+                </h2>
+
+                <p id="overallMessage">
+                    Your pond conditions are currently within
+                    the selected target ranges.
+                </p>
+
+            </div>
+
+            <div class="status-indicator" id="statusIndicator">
+                ✓
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PARAMETERS
+        ========================== -->
+
+        <section class="water-section">
+
+            <div class="water-section-title">
+
+                <div>
+                    <h2>Current Water Parameters</h2>
+
+                    <p>
+                        Latest recorded measurements
+                    </p>
+                </div>
+
+                <select id="pondSelector">
+
+                    <option value="Pond A">
+                        Pond A
+                    </option>
+
+                    <option value="Pond B">
+                        Pond B
+                    </option>
+
+                    <option value="Pond C">
+                        Pond C
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="water-parameter-grid">
+
+
+                <!-- TEMPERATURE -->
+
+                <div class="water-parameter-card">
+
+                    <div class="parameter-top">
+
+                        <div class="parameter-icon temperature">
+                            🌡️
+                        </div>
+
+                        <span
+                            class="parameter-status good"
+                            id="temperatureStatus">
+                            Good
+                        </span>
+
+                    </div>
+
+                    <span class="parameter-name">
+                        Temperature
+                    </span>
+
+                    <strong id="temperatureValue">
+                        28.5
+                    </strong>
+
+                    <small>°C</small>
+
+                    <div class="parameter-range">
+                        Target: 25–30 °C
+                    </div>
+
+                </div>
+
+
+
+                <!-- PH -->
+
+                <div class="water-parameter-card">
+
+                    <div class="parameter-top">
+
+                        <div class="parameter-icon ph">
+                            ⚗️
+                        </div>
+
+                        <span
+                            class="parameter-status good"
+                            id="phStatus">
+                            Good
+                        </span>
+
+                    </div>
+
+                    <span class="parameter-name">
+                        pH
+                    </span>
+
+                    <strong id="phValue">
+                        7.2
+                    </strong>
+
+                    <small>pH</small>
+
+                    <div class="parameter-range">
+                        Target: 6.5–8.5
+                    </div>
+
+                </div>
+
+
+
+                <!-- DO -->
+
+                <div class="water-parameter-card">
+
+                    <div class="parameter-top">
+
+                        <div class="parameter-icon oxygen">
+                            💨
+                        </div>
+
+                        <span
+                            class="parameter-status good"
+                            id="oxygenStatus">
+                            Good
+                        </span>
+
+                    </div>
+
+                    <span class="parameter-name">
+                        Dissolved Oxygen
+                    </span>
+
+                    <strong id="oxygenValue">
+                        6.4
+                    </strong>
+
+                    <small>mg/L</small>
+
+                    <div class="parameter-range">
+                        Target: ≥ 5 mg/L
+                    </div>
+
+                </div>
+
+
+
+                <!-- AMMONIA -->
+
+                <div class="water-parameter-card">
+
+                    <div class="parameter-top">
+
+                        <div class="parameter-icon ammonia">
+                            🧪
+                        </div>
+
+                        <span
+                            class="parameter-status good"
+                            id="ammoniaStatus">
+                            Good
+                        </span>
+
+                    </div>
+
+                    <span class="parameter-name">
+                        Ammonia
+                    </span>
+
+                    <strong id="ammoniaValue">
+                        0.02
+                    </strong>
+
+                    <small>mg/L</small>
+
+                    <div class="parameter-range">
+                        Target: &lt; 0.05 mg/L
+                    </div>
+
+                </div>
+
+
+
+                <!-- NITRITE -->
+
+                <div class="water-parameter-card">
+
+                    <div class="parameter-top">
+
+                        <div class="parameter-icon nitrite">
+                            🧪
+                        </div>
+
+                        <span
+                            class="parameter-status good"
+                            id="nitriteStatus">
+                            Good
+                        </span>
+
+                    </div>
+
+                    <span class="parameter-name">
+                        Nitrite
+                    </span>
+
+                    <strong id="nitriteValue">
+                        0.01
+                    </strong>
+
+                    <small>mg/L</small>
+
+                    <div class="parameter-range">
+                        Target: &lt; 0.1 mg/L
+                    </div>
+
+                </div>
+
+
+
+                <!-- TURBIDITY -->
+
+                <div class="water-parameter-card">
+
+                    <div class="parameter-top">
+
+                        <div class="parameter-icon turbidity">
+                            🌊
+                        </div>
+
+                        <span
+                            class="parameter-status good"
+                            id="turbidityStatus">
+                            Good
+                        </span>
+
+                    </div>
+
+                    <span class="parameter-name">
+                        Turbidity
+                    </span>
+
+                    <strong id="turbidityValue">
+                        25
+                    </strong>
+
+                    <small>NTU</small>
+
+                    <div class="parameter-range">
+                        Target: &lt; 50 NTU
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RECORD MEASUREMENT
+        ========================== -->
+
+        <section class="water-record-card">
+
+            <div class="section-header water-header">
+
+                <span>1.</span>
+
+                <h2>RECORD WATER MEASUREMENT</h2>
+
+            </div>
+
+
+            <div class="water-form">
+
+
+                <div class="input-group">
+
+                    <label>
+                        Pond
+                    </label>
+
+                    <select id="recordPond">
+
+                        <option>Pond A</option>
+                        <option>Pond B</option>
+                        <option>Pond C</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="measurementDate"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Temperature
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="inputTemperature"
+                            value="28.5"
+                            step="0.1"
+                        >
+
+                        <span>°C</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        pH
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="inputPH"
+                            value="7.2"
+                            step="0.1"
+                        >
+
+                        <span>pH</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Dissolved Oxygen
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="inputOxygen"
+                            value="6.4"
+                            step="0.1"
+                        >
+
+                        <span>mg/L</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Ammonia
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="inputAmmonia"
+                            value="0.02"
+                            step="0.01"
+                        >
+
+                        <span>mg/L</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Nitrite
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="inputNitrite"
+                            value="0.01"
+                            step="0.01"
+                        >
+
+                        <span>mg/L</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>
+                        Turbidity
+                    </label>
+
+                    <div class="input-with-unit">
+
+                        <input
+                            type="number"
+                            id="inputTurbidity"
+                            value="25"
+                            step="1"
+                        >
+
+                        <span>NTU</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="save-water-btn"
+                id="saveWaterBtn">
+
+                ✓ Save Measurement
+
+            </button>
+
+
+            <div
+                class="save-message"
+                id="saveMessage">
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             WATER QUALITY HISTORY
+        ========================== -->
+
+        <section class="water-history-card">
+
+            <div class="water-section-title">
+
+                <div>
+
+                    <h2>📊 Water Quality History</h2>
+
+                    <p>
+                        Recent measurements recorded for your farm
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+                            <th>Pond</th>
+                            <th>pH</th>
+                            <th>Temp.</th>
+                            <th>DO</th>
+                            <th>Ammonia</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historyTable">
+
+                        <tr>
+
+                            <td>08 Aug 2026</td>
+                            <td>Pond A</td>
+                            <td>7.2</td>
+                            <td>28.5 °C</td>
+                            <td>6.4</td>
+                            <td>0.02</td>
+
+                            <td>
+                                <span class="table-good">
+                                    ✓ Good
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>07 Aug 2026</td>
+                            <td>Pond A</td>
+                            <td>7.4</td>
+                            <td>29.1 °C</td>
+                            <td>5.8</td>
+                            <td>0.03</td>
+
+                            <td>
+                                <span class="table-good">
+                                    ✓ Good
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>06 Aug 2026</td>
+                            <td>Pond A</td>
+                            <td>7.6</td>
+                            <td>28.8 °C</td>
+                            <td>4.9</td>
+                            <td>0.08</td>
+
+                            <td>
+                                <span class="table-warning">
+                                    ⚠ Watch
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PARAMETER GUIDE
+        ========================== -->
+
+        <section class="parameter-guide">
+
+            <div class="water-section-title">
+
+                <div>
+
+                    <h2>📖 Water Quality Guide</h2>
+
+                    <p>
+                        Quick reference for important parameters
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="guide-grid">
+
+
+                <div class="guide-card">
+
+                    <strong>🌡️ Temperature</strong>
+
+                    <p>
+                        Water temperature affects fish metabolism,
+                        feeding and growth.
+                    </p>
+
+                </div>
+
+
+                <div class="guide-card">
+
+                    <strong>⚗️ pH</strong>
+
+                    <p>
+                        pH indicates how acidic or alkaline the
+                        pond water is.
+                    </p>
+
+                </div>
+
+
+                <div class="guide-card">
+
+                    <strong>💨 Dissolved Oxygen</strong>
+
+                    <p>
+                        Oxygen is essential for respiration and
+                        healthy
